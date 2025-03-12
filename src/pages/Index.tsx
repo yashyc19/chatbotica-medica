@@ -1,30 +1,13 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  Heart,
-  Shield,
-  Clock,
-  MessageCircle,
-  Brain,
-  Search,
-  Users,
-  BookOpen,
-  FileText,
-  Activity,
-  Monitor,
-  AlertCircle,
-  Pill,
-} from "lucide-react";
+import { Heart, Shield, Clock, MessageCircle, Brain, Search, Users, BookOpen, FileText, Activity, Monitor, AlertCircle, Pill } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FeatureCard from "@/components/FeatureCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import UseCase from "@/components/UseCase";
-
 const Index = () => {
-  return (
-    <div className="flex flex-col min-h-screen">
+  return <div className="flex flex-col min-h-screen">
       <Navbar />
       
       {/* Hero Section */}
@@ -112,36 +95,12 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <FeatureCard 
-              icon={Brain}
-              title="Medical Knowledge"
-              description="Built on a comprehensive database of medical information, regularly updated with the latest research and guidelines."
-            />
-            <FeatureCard 
-              icon={MessageCircle}
-              title="Conversational Interface"
-              description="Ask questions naturally as you would to a healthcare professional, and receive clear, understandable answers."
-            />
-            <FeatureCard 
-              icon={Clock}
-              title="24/7 Availability"
-              description="Get health information whenever you need it, without waiting for appointments or office hours."
-            />
-            <FeatureCard 
-              icon={Shield}
-              title="Privacy Focused"
-              description="Your conversations are confidential. We prioritize your privacy and data security."
-            />
-            <FeatureCard 
-              icon={Search}
-              title="Symptom Exploration"
-              description="Discuss your symptoms and receive information about possible causes and when to seek professional care."
-            />
-            <FeatureCard 
-              icon={BookOpen}
-              title="Health Education"
-              description="Learn about medical conditions, treatments, and preventive measures in an accessible way."
-            />
+            <FeatureCard icon={Brain} title="Medical Knowledge" description="Built on a comprehensive database of medical information, regularly updated with the latest research and guidelines." />
+            <FeatureCard icon={MessageCircle} title="Conversational Interface" description="Ask questions naturally as you would to a healthcare professional, and receive clear, understandable answers." />
+            <FeatureCard icon={Clock} title="24/7 Availability" description="Get health information whenever you need it, without waiting for appointments or office hours." />
+            <FeatureCard icon={Shield} title="Privacy Focused" description="Your conversations are confidential. We prioritize your privacy and data security." />
+            <FeatureCard icon={Search} title="Symptom Exploration" description="Discuss your symptoms and receive information about possible causes and when to seek professional care." />
+            <FeatureCard icon={BookOpen} title="Health Education" description="Learn about medical conditions, treatments, and preventive measures in an accessible way." />
           </div>
         </div>
       </section>
@@ -159,42 +118,18 @@ const Index = () => {
               </p>
               
               <div className="space-y-6">
-                <UseCase 
-                  icon={AlertCircle}
-                  title="Symptom Assessment"
-                  description="Discuss symptoms and learn about possible causes, severity, and when to consult a doctor."
-                />
-                <UseCase 
-                  icon={Pill}
-                  title="Medication Information"
-                  description="Learn about medications, potential side effects, and general usage guidelines."
-                />
-                <UseCase 
-                  icon={Activity}
-                  title="Healthy Living Advice"
-                  description="Get tips on nutrition, exercise, sleep, and other aspects of maintaining a healthy lifestyle."
-                />
-                <UseCase 
-                  icon={FileText}
-                  title="Medical Term Explanation"
-                  description="Understand complex medical terminology and procedures in simple, clear language."
-                />
-                <UseCase 
-                  icon={Monitor}
-                  title="Condition Management"
-                  description="Learn about managing chronic conditions and preventive measures for better health."
-                />
+                <UseCase icon={AlertCircle} title="Symptom Assessment" description="Discuss symptoms and learn about possible causes, severity, and when to consult a doctor." />
+                <UseCase icon={Pill} title="Medication Information" description="Learn about medications, potential side effects, and general usage guidelines." />
+                <UseCase icon={Activity} title="Healthy Living Advice" description="Get tips on nutrition, exercise, sleep, and other aspects of maintaining a healthy lifestyle." />
+                <UseCase icon={FileText} title="Medical Term Explanation" description="Understand complex medical terminology and procedures in simple, clear language." />
+                <UseCase icon={Monitor} title="Condition Management" description="Learn about managing chronic conditions and preventive measures for better health." />
               </div>
             </div>
             
             <div className="md:w-1/2 flex items-center justify-center">
               <div className="relative max-w-sm">
                 <div className="absolute -top-4 -right-4 w-full h-full bg-medbot-100 rounded-xl"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80" 
-                  alt="Doctor using laptop" 
-                  className="relative z-10 rounded-xl shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80" alt="Doctor using laptop" className="relative z-10 rounded-xl shadow-lg" />
               </div>
             </div>
           </div>
@@ -214,24 +149,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <TestimonialCard 
-              quote="MedBotica helped me understand my symptoms when I couldn't get an immediate doctor's appointment. The information was clear and helped me decide when to seek medical attention."
-              author="Sarah Johnson"
-              role="High School Teacher"
-              rating={5}
-            />
-            <TestimonialCard 
-              quote="As someone with a chronic condition, I often have questions between doctor visits. MedBotica provides reliable information that helps me manage my health better."
-              author="Michael Chen"
-              role="Software Engineer"
-              rating={4}
-            />
-            <TestimonialCard 
-              quote="The conversational interface makes it so easy to get health information. It's like texting with a knowledgeable friend who happens to be a medical expert."
-              author="Emily Rodriguez"
-              role="Marketing Manager"
-              rating={5}
-            />
+            <TestimonialCard quote="MedBotica helped me understand my symptoms when I couldn't get an immediate doctor's appointment. The information was clear and helped me decide when to seek medical attention." author="Sarah Johnson" role="High School Teacher" rating={5} />
+            <TestimonialCard quote="As someone with a chronic condition, I often have questions between doctor visits. MedBotica provides reliable information that helps me manage my health better." author="Michael Chen" role="Software Engineer" rating={4} />
+            <TestimonialCard quote="The conversational interface makes it so easy to get health information. It's like texting with a knowledgeable friend who happens to be a medical expert." author="Emily Rodriguez" role="Marketing Manager" rating={5} />
           </div>
         </div>
       </section>
@@ -252,7 +172,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/blog">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-medbot-600">
+              <Button size="lg" variant="outline" className="border-white bg-slate-200 hover:bg-slate-100 text-blue-800">
                 Browse Health Articles
               </Button>
             </Link>
@@ -261,8 +181,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
