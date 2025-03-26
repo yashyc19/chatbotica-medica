@@ -219,18 +219,21 @@ const Index = () => {
               author="Sarah Johnson"
               role="High School Teacher"
               rating={5}
+              image="https://images.unsplash.com/photo-1501286353178-1ec881214838?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
             />
             <TestimonialCard 
               quote="As someone with a chronic condition, I often have questions between doctor visits. MedBotica provides reliable information that helps me manage my health better."
               author="Michael Chen"
               role="Software Engineer"
               rating={4}
+              image="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
             />
             <TestimonialCard 
               quote="The conversational interface makes it so easy to get health information. It's like texting with a knowledgeable friend who happens to be a medical expert."
               author="Emily Rodriguez"
               role="Marketing Manager"
               rating={5}
+              image="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80"
             />
           </div>
         </div>
