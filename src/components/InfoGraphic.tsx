@@ -16,12 +16,12 @@ const InfoGraphic = ({
   title, 
   value, 
   subtitle, 
-  color = "from-blue-500 to-indigo-500",
+  color = "from-medbot-500 to-medbot-700",
   className 
 }: InfoGraphicProps) => {
   return (
     <div className={cn(
-      "relative overflow-hidden rounded-xl shadow-md border border-gray-100 transition-all hover:shadow-lg bg-white",
+      "relative overflow-hidden rounded-xl shadow-md border border-medbot-100 transition-all hover:shadow-lg hover:border-medbot-200 bg-white",
       className
     )}>
       <div className={cn(

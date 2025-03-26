@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,18 +62,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Medical theme colors
+				// Mental health theme colors
 				medbot: {
-					50: '#E6F7FF',
-					100: '#BAE3FF',
-					200: '#7CC4FA',
-					300: '#47A3F3',
-					400: '#2186EB',
-					500: '#0967D2',
-					600: '#0552B5',
-					700: '#03449E',
-					800: '#01337D',
-					900: '#002159',
+					50: '#F5F3FF',
+					100: '#EDE9FE',
+					200: '#DDD6FE',
+					300: '#C4B5FD',
+					400: '#A78BFA',
+					500: '#8B5CF6',
+					600: '#7C3AED',
+					700: '#6D28D9',
+					800: '#5B21B6',
+					900: '#4C1D95',
 				}
 			},
 			borderRadius: {
