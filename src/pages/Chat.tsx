@@ -1,5 +1,5 @@
-
 import { useState, useEffect, useRef } from "react";
+import { v4 as uuidv4 } from "uuid"; // Import UUID for unique session IDs
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatMessage from "@/components/ChatMessage";
@@ -23,59 +23,55 @@ const initialMessages: Message[] = [
   }
 ];
 
-// Sample responses for demo purposes
-const sampleResponses: Record<string, string> = {
-  default: "I understand your concern. While I can provide general information, it's always best to consult with a healthcare professional for personalized advice tailored to your specific situation.",
-  
-  headache: "Headaches can have many causes, including stress, dehydration, eye strain, or lack of sleep. For occasional headaches, rest, hydration, and over-the-counter pain relievers may help. If you're experiencing severe, frequent, or unusual headaches, please consult a healthcare provider.",
-  
-  cold: "Common cold symptoms include runny nose, sore throat, cough, and mild fever. Rest, staying hydrated, and over-the-counter cold medications can help manage symptoms. Most colds resolve within 7-10 days. If symptoms worsen or persist longer, consider consulting a healthcare provider.",
-
-  sleep: "Good sleep habits include maintaining a regular sleep schedule, creating a comfortable sleep environment, limiting screen time before bed, avoiding caffeine and large meals before sleep, and managing stress. Adults typically need 7-9 hours of quality sleep per night.",
-
-  exercise: "Regular physical activity offers numerous health benefits, including improved cardiovascular health, better weight management, enhanced mood, and reduced risk of chronic diseases. Aim for at least 150 minutes of moderate-intensity exercise weekly, along with muscle-strengthening activities twice a week.",
-
-  nutrition: "A balanced diet includes a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats. Limit processed foods, added sugars, and excessive sodium. Portion control and mindful eating are also important components of good nutrition.",
-};
-
 const Chat = () => {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isTyping, setIsTyping] = useState(false);
   const [showInfoCard, setShowInfoCard] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const sessionId = useRef<string>(uuidv4()); // Generate a unique session ID
 
-  // Function to simulate AI response
-  const generateResponse = (userMessage: string) => {
+  // Function to fetch AI response from the API
+  const fetchResponse = async (userMessage: string) => {
     setIsTyping(true);
-    
-    // Simulate network delay for a more realistic experience
-    setTimeout(() => {
-      let responseText = sampleResponses.default;
-      
-      // Simple keyword matching for demo purposes
-      const lowerCaseMessage = userMessage.toLowerCase();
-      if (lowerCaseMessage.includes("headache") || lowerCaseMessage.includes("migraine")) {
-        responseText = sampleResponses.headache;
-      } else if (lowerCaseMessage.includes("cold") || lowerCaseMessage.includes("flu") || lowerCaseMessage.includes("fever")) {
-        responseText = sampleResponses.cold;
-      } else if (lowerCaseMessage.includes("sleep") || lowerCaseMessage.includes("insomnia")) {
-        responseText = sampleResponses.sleep;
-      } else if (lowerCaseMessage.includes("exercise") || lowerCaseMessage.includes("workout")) {
-        responseText = sampleResponses.exercise;
-      } else if (lowerCaseMessage.includes("food") || lowerCaseMessage.includes("diet") || lowerCaseMessage.includes("nutrition")) {
-        responseText = sampleResponses.nutrition;
+    try {
+      // Send the user message to the server
+      const response = await fetch("https://mental-health-bot-zp03.onrender.com/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // mode: "no-cors",
+        body: JSON.stringify({
+          session_id: sessionId.current,
+          message: userMessage,
+        }),
+      });
+      console.log("Response from server:", response); // Log the response for debugging
+      if (response.ok) {
+        const data = await response.json();
+        const responseText = data.response || "I'm sorry, I couldn't process your request."; // Change "reply" to "response"
+        setMessages((prev) => [...prev, { role: "assistant", content: responseText }]);
+      } else {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: "There was an error processing your request. Please try again later." },
+        ]);
       }
-
-      setMessages(prev => [...prev, { role: "assistant", content: responseText }]);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Unable to connect to the server. Please check your internet connection." },
+      ]);
+    } finally {
       setIsTyping(false);
-    }, 1500); // Simulated response delay
+    }
   };
 
   // Handle sending a new message
   const handleSendMessage = (message: string) => {
     const newMessage: Message = { role: "user", content: message };
-    setMessages(prev => [...prev, newMessage]);
-    generateResponse(message);
+    setMessages((prev) => [...prev, newMessage]);
+    fetchResponse(message);
   };
 
   // Auto-scroll to the latest message
