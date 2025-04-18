@@ -171,11 +171,11 @@ const Blog = () => {
               Have a Health Question?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-              Get personalized information by chatting with MedBotica, our AI health assistant.
+              Get personalized information by chatting with Aurora, our AI health assistant.
             </p>
             <Link to="/chat">
               <Button size="lg" className="bg-medbot-500 hover:bg-medbot-600">
-                Chat with MedBotica
+                Chat with Aurora
               </Button>
             </Link>
           </div>

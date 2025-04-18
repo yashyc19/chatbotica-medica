@@ -38,7 +38,7 @@ const ChatInput = ({ onSendMessage, isLoading }: ChatInputProps) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask MedBotica about your health concerns..."
+          placeholder="Ask Aurora about your health concerns..."
           disabled={isLoading}
           className="min-h-12 max-h-36 pl-10 pr-16 resize-none rounded-full border-gray-200 focus-visible:ring-1 focus-visible:ring-medbot-500"
         />
