@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-6 w-6 text-medbot-500" />
-            <span className="text-xl font-bold text-gray-900">MedBotica</span>
+            <span className="text-xl font-bold text-gray-900">Aurora</span>
           </Link>
 
           {/* Desktop Navigation */}

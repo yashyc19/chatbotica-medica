@@ -19,7 +19,7 @@ interface Message {
 const initialMessages: Message[] = [
   {
     role: "assistant",
-    content: "Hello! I'm MedBotica, your AI health assistant. How can I help you today? Please note I'm for informational purposes only and not a substitute for professional medical advice."
+    content: "Hello! I'm Aurora, your AI health assistant. How can I help you today? Please note I'm for informational purposes only and not a substitute for professional medical advice."
   }
 ];
 
@@ -101,7 +101,7 @@ const Chat = () => {
               onClick={() => setShowInfoCard(!showInfoCard)}
             >
               <Info size={16} className="mr-2" />
-              About MedBotica
+              About Aurora
             </Button>
           </div>
 
@@ -112,7 +112,7 @@ const Chat = () => {
                   <div className="flex-1">
                     <h3 className="text-lg font-medium text-blue-800 mb-1">Important Information</h3>
                     <p className="text-sm text-blue-700">
-                      MedBotica provides general health information for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+                    Aurora provides general health information for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
                     </p>
                   </div>
                   <Button 
@@ -130,7 +130,7 @@ const Chat = () => {
 
           <div className="bg-white rounded-lg shadow-md border border-gray-200">
             <div className="p-4 border-b border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900">Chat with MedBotica</h2>
+              <h2 className="text-xl font-semibold text-gray-900">Chat with Aurora</h2>
               <p className="text-sm text-gray-600">Ask questions about symptoms, conditions, or general health advice</p>
             </div>
             

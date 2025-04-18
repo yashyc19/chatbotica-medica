@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Heart className="h-6 w-6 text-medbot-500" />
-              <span className="text-xl font-bold text-gray-900">MedBotica</span>
+              <span className="text-xl font-bold text-gray-900">Aurora</span>
             </div>
             <p className="text-gray-600 text-sm mb-4">
               Your AI-powered health assistant, providing reliable medical information through natural conversation.
@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/chat" className="text-gray-600 hover:text-medbot-500 text-sm">
-                  Chat with MedBot
+                  Chat with Aurora
                 </Link>
               </li>
               <li>
@@ -87,7 +87,7 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <Mail size={16} className="mt-0.5 text-medbot-500 flex-shrink-0" />
                 <a href="mailto:contact@medbotica.com" className="text-gray-600 hover:text-medbot-500 text-sm">
-                  contact@medbotica.com
+                  contact@aurora.com
                 </a>
               </li>
             </ul>
@@ -96,10 +96,10 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-gray-500 text-sm text-center">
-            &copy; {currentYear} MedBotica. All rights reserved.
+            &copy; {currentYear} Aurora. All rights reserved.
           </p>
           <p className="text-gray-400 text-xs text-center mt-2">
-            Disclaimer: MedBotica provides information for educational purposes only and is not a substitute for professional medical advice.
+            Disclaimer: Aurora provides information for educational purposes only and is not a substitute for professional medical advice.
           </p>
         </div>
       </div>

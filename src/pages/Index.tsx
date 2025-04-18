@@ -27,7 +27,7 @@ const Index = () => {
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <Link to="/chat">
                   <Button size="lg" className="bg-medbot-500 hover:bg-medbot-600 text-white">
-                    Talk to MindMate Now
+                    Talk to Aurora Now
                   </Button>
                 </Link>
               </div>
@@ -40,7 +40,7 @@ const Index = () => {
                   <CardContent className="p-0">
                     <img 
                       src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80" 
-                      alt="MindMate in action" 
+                      alt="Aurora in action" 
                       className="w-full h-auto"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4">
@@ -49,7 +49,7 @@ const Index = () => {
                           <Brain size={16} />
                         </div>
                         <div className="ml-3">
-                          <h3 className="font-semibold">MindMate</h3>
+                          <h3 className="font-semibold">Aurora</h3>
                           <div className="flex items-center text-xs text-gray-500">
                             <div className="w-2 h-2 bg-green-500 rounded-full mr-1"></div>
                             <span>Always Available</span>
@@ -70,7 +70,7 @@ const Index = () => {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold gradient-heading mb-4">
-              How MindMate Supports Your Mental Health
+              How Aurora Supports Your Mental Health
             </h2>
           </div>
 
@@ -215,7 +215,7 @@ const Index = () => {
           <div className="flex justify-center">
             <Link to="/chat">
               <Button size="lg" variant="secondary" className="bg-white text-medbot-700 hover:bg-gray-100">
-                Chat with MindMate
+                Chat with Aurora
               </Button>
             </Link>
           </div>
