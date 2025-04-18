@@ -35,7 +35,7 @@ const Chat = () => {
     setIsTyping(true);
     try {
       // Send the user message to the server
-      const response = await fetch("https://mental-health-bot-zp03.onrender.com/chat", {
+      const response = await fetch("https://mental-health-bot-e36v.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
